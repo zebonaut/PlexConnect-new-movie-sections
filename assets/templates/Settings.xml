@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atv>
+  <head>
+    <script src="http://trailers.apple.com/settings.js"/>
+  </head>
+  
+  <body>
+    <listWithPreview id="SettingsPage">
+      <header>
+        <simpleHeader>
+          <title>Settings</title>
+        </simpleHeader>
+      </header>
+      <preview>
+        <keyedPreview> 
+          <title>&#x00AD;<!--soft-hyphen--></title>
+          <summary/>
+          <metadataKeys>
+            <label>Version</label>
+            <label>Authors</label>
+            <label>Wiki/Docs</label>
+            <label>Homepage</label>
+            <label>Forum</label>
+          </metadataKeys>
+          <metadataValues>
+            <label>Alpha</label>
+            <label>Baa, roidy</label>
+            <label>f00b4r</label>
+            <label>https://github.com/ibaa/plexconnect</label>
+            <label>http://forums.plexapp.com/index.php/forum/136-appletv-plexconnect/</label>
+          </metadataValues>
+          <image>http://trailers.apple.com/thumbnails/PlexConnectLogo.jpg</image>
+        </keyedPreview> 
+      </preview>
+      
+      <menu>
+        <sections>
+          <menuSection>
+            <header>
+              <horizontalDivider alignment="left">
+                <title>Appearance</title>
+              </horizontalDivider>
+            </header>
+            <items>
+              <oneLineMenuItem id="MovieView" onSelect="toggleSettings('MovieView')">
+                <label>Movie View</label>
+                <rightLabel>{{SETTING(movieview)}}</rightLabel>
+              </oneLineMenuItem>
+              <oneLineMenuItem id="ShowView" onSelect="toggleSettings('ShowView')">
+                <label>Show View</label>
+                <rightLabel>{{SETTING(showview)}}</rightLabel>
+              </oneLineMenuItem>
+              <oneLineMenuItem id="SeasonView" onSelect="toggleSettings('SeasonView')">
+                <label>Season View</label>
+                <rightLabel>{{SETTING(seasonview)}}</rightLabel>
+              </oneLineMenuItem>
+            </items>
+          </menuSection>
+          <menuSection>
+            <header>
+              <horizontalDivider alignment="left">
+                <title>Transcoder</title>
+              </horizontalDivider>
+            </header>
+            <items>
+              <oneLineMenuItem id="ForceDirectPlay" onSelect="toggleSettings('ForceDirectPlay')">
+                <label>Force Direct Play</label>
+                <rightLabel>{{SETTING(forcedirectplay)}}</rightLabel>
+              </oneLineMenuItem>
+              <oneLineMenuItem id="ForceTranscode" onSelect="toggleSettings('ForceTranscode')">
+                <label>Force Transcode</label>
+                <rightLabel>{{SETTING(forcetranscode)}}</rightLabel>
+              </oneLineMenuItem>
+							<oneLineMenuItem id="TranscodeQuality" onSelect="toggleSettings('TranscodeQuality')">
+                <label>Transcoder Quality</label>
+                <rightLabel>{{SETTING(transcodequality)}}</rightLabel>
+              </oneLineMenuItem>
+            </items>
+          </menuSection>
+        </sections>
+      </menu>
+    </listWithPreview>
+  </body>
+</atv>

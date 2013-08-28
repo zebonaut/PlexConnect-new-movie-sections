@@ -1,0 +1,46 @@
+<atv>
+  <head>
+    <script src="http://trailers.apple.com/photo.js"/>
+  </head>
+  
+  <body>
+    <mediaBrowser id="browser" gridLayout="mixed">
+      <header>
+        <headerWithCountAndButtons>
+          <title>{{VAL(title2)}}</title>
+          <count>{{VAL(size)}}</count>
+          <buttons>
+            <actionButton id="slideshow" onSelect="onSettings()" onPlay="onSlideShow()">
+              <title>SlideShow</title>
+            </actionButton>
+          </buttons>
+        </headerWithCountAndButtons>
+      </header>
+      <items>
+        <photo id="{{VAL(ratingKey)}}" onSelect="atv.loadURL('http://trailers.apple.com{{ADDPATH(key)}}')">
+          {{COPY(Directory)}}
+          <assets>
+            <photoAsset width="0" height="0" src="http://trailers.apple.com/thumbnails/PhotoFolder.png"/>{{CUT(Media/Part/key::=CUT)}}
+          </assets>
+          <stash>
+            <directory>true</directory>
+          </stash>
+        </photo>
+      
+        <photo id="{{VAL(ratingKey)}}" onSelect="onSelectPhoto({{VAL(ratingKey)}})">
+          {{COPY(Photo)}}
+          <caption>test</caption>
+          <assets>
+            <photoAsset width="0" height="0" src="{{IMAGEURL(Media/Part/key)}}"/>{{CUT(Media/Part/key:CUT:=)}}
+            <photoAsset width="0" height="0" src="{{IMAGEURL(key)}}"/>{{CUT(Media/Part/key::=CUT)}}
+          </assets>
+          <stash>
+            <url>{{URL(Media/Part/key)}}</url>{{CUT(Media/Part/key:CUT:=)}}
+            <url>{{URL(key)}}</url>{{CUT(Media/Part/key::=CUT)}}
+            <directory>false</directory>
+          </stash>
+          </photo>
+      </items>
+    </mediaBrowser>
+  </body>
+</atv>

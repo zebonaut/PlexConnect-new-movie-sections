@@ -1,0 +1,13 @@
+<atv>
+  <body>
+    <videoPlayer id="com.sample.video-player">
+      <httpFileVideoAsset id="{{VAL(Video/key)}}">
+        <mediaURL>{{MEDIAURL(Video)}}</mediaURL>
+        <title>{{VAL(Video/title)}}</title>
+        <description>{{VAL(Video/summary)}}</description>
+        <bookmarkTime>{{EVAL(Video/viewOffset:0:int(x/1000))}}</bookmarkTime>
+        <image>{{IMAGEURL(Video/thumb)}}</image>
+      </httpFileVideoAsset>
+    </videoPlayer>
+  </body>
+</atv>
